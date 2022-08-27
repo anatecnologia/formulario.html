@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+    <title>Cadastro</title>
+<link rel="shortcut icon" href="html-logo300.png" type="image/x-icon">
+<style>
+    body{
+        background-color:  aquamarine;
+    }
+</style>
+</head>
+<body>
+<div>  <!-- div - divide parte do codigo-->
+    <h1 id="titulo">Cadastro de Devs</h1>
+    <p id="subtitulo">Complete suas informações</p>
+</div>
+
+<form> <!--iniciando o formulario-->
+    <fieldset class="grupo">   <!--Agrupa os campos do formulário-->
+        <div class="campo">
+            <label for="nome"><strong>Nome:</strong> </label> <!---explic do campo-->
+            <input type="text" name="nome" id="nome" required> 
+               </div>
+            <!--entrada do nome do usuario-->
+            <!--Required preenchimento obrigatório-->
+     
+        <div class="campo">
+            <label for="sobrenome"><strong>Sobrenome:</strong> </label>
+            <input type="text" name="sobrenome" id="sobrenome" required> 
+            <!--entrada de valor-->
+            <!--required nao pode ser enviado  sem preenchimento--> 
+
+       <div class="campo">
+        <label for="email"> <strong> Email</strong>:</label>
+        <input type="email"  name="email" id=email required> <!--entrada de valor email-->
+        </div>
+    </fieldset class="grupo"> <!--agrupador de campos-->
+ <br>
+
+    <div class="campo">
+        <label><strong> De qual lado da aplicação você desenvolve?</strong></label>
+         <!--titulo -->
+         <!--Strong /Negrito-->
+       <br>
+        <label><!--opcoes de resposta com label-->
+            <input type="radio" name="devweb"value="frontend" checked>  Front-end
+        </label> 
+
+        <label><!--opcoes de resposta com label-->
+            <input type="radio" name="devweb" value="backend" checked> Back-end
+        </label>
+
+        <input type="radio" name="devweb" value="fullstack" checked> Fullstack
+    </div>
+
+    <div class="campo"> <!--Divide parte do codigo--->
+        <label for="senoridade"><strong> Senioridade</strong></label> <!--titulo-->
+        <select id="senioridade">
+            <option selected disabled value="Selecione">Selecione</option>  <!--Seleciona em JUNIOR PLENO SENIOR-->
+            <option>Junior</option>
+            <option>Pleno</option>
+            <option>Sênior</option>
+            </select>
+    </div>
+
+         <!---Checkbox-->
+         <fieldset class="campo">
+        <div id="check"> <!--Divide o codigo-->
+        <label><strong>Selecione as tecnologias que utiliza ou gostaria de aprender:</strong></label> <br>
+        
+        <input type="checkbox" id="tec1" name="tec1" value="html" checked>
+        <label>HTML</label> 
+
+        <input type="checkbox" id="tec2" name="tec2" value="css">
+        <label for="tec2">CSS</label>         <!---Seleciona  a tecnologia-->
+
+        <input type="checkbox" id="tec3" name="tec3" value="javascript">
+        <label for="tec3">Javascript</label> <!--Podendo selecionar varias opcões-->
+
+        <input type="checkbox" id="tec4" name="tec4" value="php">
+        <label for="tec4">PHP</label>
+
+        <input type="checkbox" id="tec5" name="tec5" value="c#">
+        <label for="tec5">C#</label> 
+
+        <input type="checkbox" id="tec6" name="tec6" value="python">
+        <label for="tec6">Python</label>
+
+        <input type="checkbox" id="tec7" name="tec7" value="java">
+        <label for="tec7">Java</label>
+    </div>
+</fieldset>
+
+<div class="campo"> <!---Div- divide o codigo-->
+    <label><strong>Conte um pouco de sua experiencia:</strong> </label>
+  
+    <textarea  rows="6" style="width: 26em"  id="experiencia" name="experiencia"></textarea> <!---Seleciona o tamanho da area de resposta-->
+</div>
+
+<button class="botao" type="submit">Concluído </button> <!--botao de concluido-->
+</form>
+</body>
+</html>
